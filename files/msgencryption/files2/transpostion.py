@@ -1,19 +1,22 @@
 import math
 import pyperclip
-
+from tkinter import *
 # transposition cipher
 # ref - https://inventwithpython.com/hacking/chapter8.html
-def tc(msg1):
-    msg = msg1
-    print("Enter Key")
-    key = int(input())
+def tcenc(master,e1,e2):
+    msg = e1.get()
+
+
+    key = e2.get()
+    print(key)
     cipher = encmsg(key, msg)
-    print(cipher + '|')
+    l2 = Label(master, text=cipher)
+    l2.pack()
     pyperclip.copy(cipher)
 
 
 def encmsg(mkey, message):
-    cipher = [''] * mkey
+    cipher = float(' ') * mkey
     for col in range(mkey):
         pos = col
         while pos < len(message):

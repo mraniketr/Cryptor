@@ -12,7 +12,6 @@ def revc(master,e1):
     copy(crev)
     l2=Label(master,text=crev)
     l2.pack()
-    tkinter.messagebox.showinfo("NOTICE","The result is copied in Clipboard")
 
 
 
