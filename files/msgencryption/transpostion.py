@@ -24,13 +24,13 @@ def encmsg(mkey, message):
 
 
 # decprytion of transpositon cipher
-def dc(msg):
-    myMessage = msg
-    print("Enter Key")
-    myKey = int(input())
+def tcdec(master,e1,e2):
+    myMessage = e1.get()
+    myKey =int(e2.get())
     plaintext = decryptMessage(myKey, myMessage)
-    print("The plain text is")
-    print(plaintext)
+    copy(str(plaintext))
+    l2 = Label(master, text=(plaintext))
+    l2.pack()
 
 
 def decryptMessage(key, message):

@@ -8,11 +8,15 @@ from pyperclip import copy
 def b64enc(master,e1):
     msg = e1.get()
     encoded_data = base64.b64encode(msg.encode())
-    copy(str(encoded_data))
-    l2 = Label(master, text=encoded_data)
+    copy(str(encoded_data,'utf-8'))
+    l2 = Label(master, text=str(encoded_data,'utf-8'))
     l2.pack()
 
 
-def dec(msg):
+def b64dec(master,e1):
+    msg=e1.get()
     decoded_data = base64.b64decode(msg)
-    return decoded_data
+    copy(str(decoded_data,'utf-8'))
+    l2 = Label(master, text=str(decoded_data,'utf-8'))
+    l2.pack()
+
