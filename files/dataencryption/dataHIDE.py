@@ -5,6 +5,8 @@ import shutil
 #Filedialog for selection
 from tkinter import *
 from tkinter import filedialog
+from tkinter import messagebox
+
 
 
 #to distinguish between OS
@@ -18,7 +20,7 @@ def fuzip():
         os.system('7z.exe x classified.rar')
     else:
         os.system("unzip classified.jpg")
-    print("Extraction successful")
+    messagebox.showinfo("Success", "Extraction successful")
 
 #function to create zip and the encrypted image with classified information
 def fzip():
@@ -39,6 +41,7 @@ def fzip():
         os.rename(isrc,'final.jpg')
         os.system("cat final.jpg final.zip > classified.jpg")
         os.system("rm final.zip")
+    messagebox.showinfo("Success", "Encryption successful,in classified.jpg")
 
 
 

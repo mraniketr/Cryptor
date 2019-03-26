@@ -1,6 +1,7 @@
 import math
 from  pyperclip import copy
 from tkinter import *
+from tkinter import messagebox
 
 # transposition cipher
 # ref - https://inventwithpython.com/hacking/chapter8.html
@@ -11,6 +12,8 @@ def tcenc(master,e1,e2):
     copy(str(cipher ))
     l2 = Label(master, text=(cipher + '|'))
     l2.pack()
+    messagebox.showinfo("Success", "Result is copied in the clipboard")
+
 
 
 def encmsg(mkey, message):
@@ -31,6 +34,7 @@ def tcdec(master,e1,e2):
     copy(str(plaintext))
     l2 = Label(master, text=(plaintext))
     l2.pack()
+
 
 
 def decryptMessage(key, message):

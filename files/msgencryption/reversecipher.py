@@ -1,6 +1,7 @@
 from tkinter import *
 import tkinter.messagebox
 from pyperclip import copy
+from tkinter import messagebox
 
 def revc(master,e1):
     message=e1.get()
@@ -12,6 +13,8 @@ def revc(master,e1):
     copy(crev)
     l2=Label(master,text=crev)
     l2.pack()
+
+    messagebox.showinfo("Success", "Result is copied in the clipboard")
 
 
 
