@@ -1,12 +1,14 @@
 import math
-import pyperclip
+from  pyperclip import copy
 from tkinter import *
+
 # transposition cipher
 # ref - https://inventwithpython.com/hacking/chapter8.html
 def tcenc(master,e1,e2):
     msg = e1.get()
     key = int(e2.get())
     cipher = encmsg(key, msg)
+    copy(str(cipher ))
     l2 = Label(master, text=(cipher + '|'))
     l2.pack()
 
