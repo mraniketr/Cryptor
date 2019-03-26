@@ -12,7 +12,7 @@ def b64enc(master,e1):
     encoded_data = base64.b64encode(msg.encode())
     copy(str(encoded_data,'utf-8'))
     l2 = Label(master, text=str(encoded_data,'utf-8'))
-    l2.pack()
+    l2.grid(row=8,column=1)
     messagebox.showinfo("Success", "Result is copied in the clipboard")
 
 def b64dec(master,e1):
@@ -20,5 +20,5 @@ def b64dec(master,e1):
     decoded_data = base64.b64decode(msg)
     copy(str(decoded_data,'utf-8'))
     l2 = Label(master, text=str(decoded_data,'utf-8'))
-    l2.pack()
+    l2.grid(row=8,column=1)
 

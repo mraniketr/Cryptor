@@ -11,7 +11,7 @@ def tcenc(master,e1,e2):
     cipher = encmsg(key, msg)
     copy(str(cipher ))
     l2 = Label(master, text=(cipher + '|'))
-    l2.pack()
+    l2.grid(row=8, column=1)
     messagebox.showinfo("Success", "Result is copied in the clipboard")
 
 
@@ -33,8 +33,7 @@ def tcdec(master,e1,e2):
     plaintext = decryptMessage(myKey, myMessage)
     copy(str(plaintext))
     l2 = Label(master, text=(plaintext))
-    l2.pack()
-
+    l2.grid(row=8, column=1)
 
 
 def decryptMessage(key, message):

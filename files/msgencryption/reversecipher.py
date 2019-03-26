@@ -12,7 +12,7 @@ def revc(master,e1):
         i=i-1
     copy(crev)
     l2=Label(master,text=crev)
-    l2.pack()
+    l2.grid(row=8,column=1)
 
     messagebox.showinfo("Success", "Result is copied in the clipboard")
 

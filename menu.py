@@ -5,7 +5,7 @@ from files.encmenu import *
 
 root =Tk()
 root.title("CRYPTER 1.0")
-root.geometry("200x300")
+root.geometry("200x360+50+50")
 
 
 l1=Label(root,text="Welcome to Crypter 1.0")
