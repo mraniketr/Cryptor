@@ -5,18 +5,14 @@ from tkinter import *
 # ref - https://inventwithpython.com/hacking/chapter8.html
 def tcenc(master,e1,e2):
     msg = e1.get()
-
-
-    key = e2.get()
-    print(key)
+    key = int(e2.get())
     cipher = encmsg(key, msg)
-    l2 = Label(master, text=cipher)
+    l2 = Label(master, text=(cipher + '|'))
     l2.pack()
-    pyperclip.copy(cipher)
 
 
 def encmsg(mkey, message):
-    cipher = float(' ') * mkey
+    cipher = [''] * mkey
     for col in range(mkey):
         pos = col
         while pos < len(message):
